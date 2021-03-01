@@ -11999,4 +11999,13 @@ figure ul {
     list-style: none;
     transform: translateX(-1rem);
 }
+
+.screen-reader-text {
+    display: none;
+}
+
+.post-navigation .nav-links {
+    display: flex;
+    justify-content: space-between;
+}
 /*# sourceMappingURL=custom.css.map */
