@@ -32,9 +32,9 @@
 
         <ul class="nav flex-column fw-light">
         <?php foreach ($menu_items as $item) : ?>
-            <li class="nav-item">
+            <li class="nav-item <?= check_active_menu($item['url']) ?>">
                 <?php if(count($item['children']) > 1) { ?>
-                    <a class="nav-link"
+                    <a class="nav-link portfolio-link"
                         data-bs-toggle="collapse"
                         href="#collapseExample"
                         role="button"
@@ -55,7 +55,7 @@
                 <?php if( !empty($item['children']) ):?>
                 <ul class="collapse categories-ul" id="collapseExample">
                     <?php foreach($item['children'] as $child): ?>
-                    <li class="card card-body bg-light">
+                    <li class="card card-body bg-light <?= check_active_menu($child['url']) ?>">
                         <a class="link-category" href="<?= $child['url'] ?>" title="<?= $child['title'] ?>"><?= $child['title'] ?></a>
                     </li>
                     <?php endforeach; ?>

@@ -12000,6 +12000,11 @@ figure ul {
     transform: translateX(-1rem);
 }
 
+.active,
+.portfolio-link:active {
+    font-weight: bold;
+}
+
 .screen-reader-text {
     display: none;
 }

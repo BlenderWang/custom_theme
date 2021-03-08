@@ -34,30 +34,16 @@ function wp_get_menu_array($current_menu) {
     return $menu;
 }
 
-/* function wpb_custom_new_menu() {
-    register_nav_menu('custom-nav-menu',__( 'Nav Menu' ));
-}
-add_action( 'init', 'wpb_custom_new_menu' ); */
-
-/**
- * Register Custom Navigation Walker
- */
-/* function register_navwalker(){
-	require_once get_template_directory() . '/class-wp-bootstrap-navwalker.php';
-}
-add_action( 'after_setup_theme', 'register_navwalker' ); */
-
-/* Add custom class to link in menu */
-/* function wp_modify_menuclass($ulclass) {
-    return preg_replace('/<a /', '<a class="nav-link"', $ulclass);
+function check_active_menu( $menu_item ) {
+    $actual_link = ( isset( $_SERVER['HTTPS'] ) ? "https" : "http" ) . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+    //return $actual_link;
+    if ( $actual_link == $menu_item ) {
+        return 'active';
+    }
+    return '';
 }
 
-add_filter('wp_nav_menu', 'wp_modify_menuclass'); */
-
-/* Add custom classes to list item "li" */
-/* function _namespace_menu_item_class( $classes, $item ) {       
-    $classes[] = "nav-item"; 
-    return $classes;
-} 
-
-add_filter( 'nav_menu_css_class' , '_namespace_menu_item_class' , 10, 2 ); */
+// function filter_images($content){
+//     return preg_replace('/<img (.*) \/>\s*/iU', '<span class="className"><b><img \1 /></b></span>', $content);
+// }
+// add_filter('the_content', 'filter_images');
