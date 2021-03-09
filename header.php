@@ -12,7 +12,7 @@
         <title>Alexander Elling</title>
 
         <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri().'/js/bootstrap.bundle.min.js'; ?>"></script>
-        <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri().'/js/script.js'; ?>"></script>
+        
 
         <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri().'/css/bootstrap.css'; ?>">
         <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">

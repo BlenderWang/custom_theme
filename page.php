@@ -8,7 +8,7 @@ get_header();
 get_sidebar();
 ?>
 
-<div class="col col-8 main-col-wrapper about">
+<div class="col col-8 main-col-wrapper <?= the_title_attribute() ?>">
 	<section class="d-grid">
 		<h3 class="text-uppercase fw-bold fs-5 lh-lg page-title">
 			<?php the_title_attribute(); ?> 

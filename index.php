@@ -8,7 +8,7 @@ get_sidebar();
 ?>
 
 <div class="col col-8 main-col-wrapper">
-        <section class="gallery grid">
+        <section id='gallery' class="gallery grid">
 
             <?php while ( have_posts() ) : the_post(); ?>
             <div class="grid--item">
