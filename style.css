@@ -12032,16 +12032,6 @@ footer {
     text-align: center;
 }
 
-.Contact .was-validated .form-control:valid:focus {
-    border-color: var(--bs-teal);
-}
-
-.Contact form .form-control:focus {
-    border-color: var(--bs-secondary);
-    -webkit-box-shadow: 0 0 0 0.15rem #ced4da;
-    box-shadow: 0 0 0 0.15rem #ced4da;
-}
-
 .Contact form label {
     padding: 1rem 1.75rem;
 }
@@ -12058,6 +12048,7 @@ figure ul {
 }
 
 .active,
+.portfolio > a,
 .portfolio-link:active {
     font-weight: bold;
 }

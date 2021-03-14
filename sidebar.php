@@ -32,7 +32,16 @@
 
         <ul class="nav flex-column fw-light">
         <?php foreach ($menu_items as $item) : ?>
-            <li class="nav-item <?= check_active_menu($item['url']) ?>">
+
+            <?php 
+                $show = '';
+                foreach($item['children'] as $child):
+                    if(check_active_menu($child['url'])) {
+                        $show = 'show';
+                    }
+                endforeach;
+            ?>
+            <li class="nav-item <?=($show == 'show') ? 'portfolio' : '' ?> <?= check_active_menu($item['url']) ?>">
                 <?php if(count($item['children']) > 1) { ?>
                     <a class="nav-link portfolio-link"
                         data-bs-toggle="collapse"
@@ -53,7 +62,7 @@
                 </a>
                 <?php } ?>
                 <?php if( !empty($item['children']) ):?>
-                <ul class="collapse categories-ul" id="collapseExample">
+                <ul class="collapse categories-ul <?= $show ?>" id="collapseExample">
                     <?php foreach($item['children'] as $child): ?>
                     <li class="card card-body bg-light <?= check_active_menu($child['url']) ?>">
                         <a class="link-category" href="<?= $child['url'] ?>" title="<?= $child['title'] ?>"><?= $child['title'] ?></a>

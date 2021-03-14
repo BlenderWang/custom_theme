@@ -34,9 +34,20 @@ function wp_get_menu_array($current_menu) {
     return $menu;
 }
 
+function endsWith( $haystack, $needle ) {
+    $length = strlen( $needle );
+    if( !$length ) {
+        return true;
+    }
+    return substr( $haystack, -$length ) === $needle;
+}
+
 function check_active_menu( $menu_item ) {
     $actual_link = ( isset( $_SERVER['HTTPS'] ) ? "https" : "http" ) . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-    //return $actual_link;
+    if(!endsWith($menu_item, '/')) {
+        $menu_item = $menu_item . '/';
+    }
+    
     if ( $actual_link == $menu_item ) {
         return 'active';
     }
