@@ -14,7 +14,7 @@
             class="logo-container d-flex justify-content-center align-items-center"
         >
             <img
-                src="<?php echo get_stylesheet_directory_uri().'/images/deviantart-brands.svg'; ?>"
+                src="<?php echo get_stylesheet_directory_uri().'/images/alex_logo_portfolio.svg'; ?>"
                 class="img-logo py-3"
                 alt="placeholder logo"
                 srcset=""

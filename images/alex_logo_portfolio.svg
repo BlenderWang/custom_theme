@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="500"
+   height="500"
+   viewBox="0 0 132.29166 132.29167"
+   version="1.1"
+   id="svg8"
+   sodipodi:docname="alex_logo_portfolio.svg"
+   inkscape:version="1.0.1 (0767f8302a, 2020-10-17)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1680"
+     inkscape:window-height="1000"
+     id="namedview10"
+     showgrid="false"
+     inkscape:zoom="0.918"
+     inkscape:cx="250"
+     inkscape:cy="250"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg8" />
+  <defs
+     id="defs2" />
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <rect
+     style="fill:#ffffff;stroke-width:0.342881"
+     id="rect833"
+     width="132.29167"
+     height="132.29167"
+     x="1.0032179e-06"
+     y="1.0032179e-06" />
+  <g
+     id="g844"
+     transform="matrix(1.4011207,0,0,1.4011207,-26.532463,-26.532463)">
+    <path
+       id="path841"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:50.8px;line-height:1.25;font-family:GeosansLight;-inkscape-font-specification:GeosansLight;letter-spacing:0px;word-spacing:0px;white-space:pre;inline-size:0;fill:#808080;fill-opacity:1;stroke:none;stroke-width:0.469254"
+       d="M 62.297784,19.677172 36.620137,86.078748 h 3.603857 L 47.702017,66.798023 H 63.432483 V 63.103926 H 49.143531 l 13.154253,-34.0567 6.914296,17.901559 h 3.668665 z m 9.373335,33.638179 3.78078,9.788575 h -5.652986 v 3.694097 h 7.184606 l 7.388056,19.280725 h 3.693959 L 75.351405,53.315351 Z" />
+    <path
+       id="path848"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:50.8px;line-height:1.25;font-family:GeosansLight;-inkscape-font-specification:GeosansLight;letter-spacing:0px;word-spacing:0px;white-space:pre;inline-size:0;fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:0.469254"
+       d="M 64.768582,48.285157 V 112.6145 h 30.90295 v -3.69383 H 68.462405 V 79.368449 H 80.345368 L 78.826464,75.404454 H 68.462405 V 51.978979 h 27.209127 v -3.693822 z m 20.612039,27.119297 1.538317,3.963995 h 8.752594 v -3.963995 z" />
+  </g>
+</svg>

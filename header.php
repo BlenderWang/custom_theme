@@ -19,7 +19,7 @@
         
         <link
             rel="shortcut icon"
-            href="<?php echo get_stylesheet_directory_uri().'/images/deviantart-brands.svg'; ?>"
+            href="<?php echo get_stylesheet_directory_uri().'/images/alex_logo_portfolio.svg'; ?>"
             type="image/x-icon"
         />
         <script

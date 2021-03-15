@@ -11672,7 +11672,8 @@ body {
 }
 
 #sidebar-wrapper .img-logo {
-    width: 1rem;
+    width: 2rem;
+    /* width: 3.2rem; */
     height: auto;
 }
 

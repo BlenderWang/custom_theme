@@ -44,10 +44,10 @@ function endsWith( $haystack, $needle ) {
 
 function check_active_menu( $menu_item ) {
     $actual_link = ( isset( $_SERVER['HTTPS'] ) ? "https" : "http" ) . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
-    if(!endsWith($menu_item, '/')) {
+    if( !endsWith($menu_item, '/') ) {
         $menu_item = $menu_item . '/';
     }
-    
+    // echo $actual_link;
     if ( $actual_link == $menu_item ) {
         return 'active';
     }
