@@ -33,8 +33,8 @@
      units="px"
      inkscape:showpageshadow="false"
      showborder="false"
-     inkscape:window-width="1680"
-     inkscape:window-height="1000"
+     inkscape:window-width="1704"
+     inkscape:window-height="1015"
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
@@ -47,7 +47,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -55,25 +55,6 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1">
-    <g
-       id="g896"
-       transform="matrix(0.26458333,0,0,0.26458333,48.64475,48.64475)">
-      <rect
-         style="fill:#ffffff;stroke-width:1.29593"
-         id="rect833"
-         width="500"
-         height="500"
-         x="-183.85417"
-         y="-183.85417" />
-      <path
-         id="path841"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:50.8px;line-height:1.25;font-family:GeosansLight;-inkscape-font-specification:GeosansLight;letter-spacing:0px;word-spacing:0px;white-space:pre;inline-size:0;fill:#808080;fill-opacity:1;stroke:none;stroke-width:1.77356"
-         d="m 51.60202,-109.48376 -97.049376,250.96659 h 13.620877 L -3.563087,68.610795 H 55.890647 V 54.648855 H 1.885157 L 51.60202,-74.069382 77.734791,-6.409948 H 91.600613 Z M 87.028798,17.652667 101.31836,54.648855 H 79.952744 v 13.96194 h 27.154416 l 27.92336,72.872035 h 13.96142 L 100.93854,17.652667 Z" />
-      <path
-         id="path848"
-         style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:50.8px;line-height:1.25;font-family:GeosansLight;-inkscape-font-specification:GeosansLight;letter-spacing:0px;word-spacing:0px;white-space:pre;inline-size:0;fill:#1a1a1a;fill-opacity:1;stroke:none;stroke-width:1.77356"
-         d="M 60.940468,-1.3590922 V 241.77543 H 177.73902 V 227.8145 H 74.901373 V 116.12107 h 44.911987 l -5.74074,-14.98203 H 74.901373 V 12.601811 H 177.73902 V -1.3590922 Z m 77.903772,102.4981322 5.81411,14.98203 h 33.08067 v -14.98203 z" />
-    </g>
     <rect
        style="fill:#333333;stroke-width:0.54861"
        id="rect898"
