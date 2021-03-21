@@ -47,14 +47,8 @@ function check_active_menu( $menu_item ) {
     if( !endsWith($menu_item, '/') ) {
         $menu_item = $menu_item . '/';
     }
-    // echo $actual_link;
     if ( $actual_link == $menu_item ) {
         return 'active';
     }
     return '';
 }
-
-// function filter_images($content){
-//     return preg_replace('/<img (.*) \/>\s*/iU', '<span class="className"><b><img \1 /></b></span>', $content);
-// }
-// add_filter('the_content', 'filter_images');
