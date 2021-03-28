@@ -12041,6 +12041,11 @@ footer {
     height: calc(7.5rem + 10px) !important;
 }
 
+/* single page */
+.btn-light-border {
+    border-color: #212529;
+}
+
 /* additional */
 figure ul {
     list-style-type: none;
