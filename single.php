@@ -32,7 +32,7 @@ get_sidebar();
     </div>
 
     <div class="navigation-btns">
-        <a href="/wordpress" class="btn btn-dark back">Back</a>
+        <a href="/" class="btn btn-dark back">Back</a>
     </div>
     
     <?php

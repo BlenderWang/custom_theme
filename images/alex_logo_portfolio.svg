@@ -23,8 +23,8 @@
      guidetolerance="10"
      inkscape:pageopacity="0"
      inkscape:pageshadow="2"
-     inkscape:window-width="1680"
-     inkscape:window-height="1000"
+     inkscape:window-width="1704"
+     inkscape:window-height="1015"
      id="namedview10"
      showgrid="false"
      inkscape:zoom="0.918"
@@ -33,7 +33,8 @@
      inkscape:window-x="0"
      inkscape:window-y="0"
      inkscape:window-maximized="1"
-     inkscape:current-layer="svg8" />
+     inkscape:current-layer="svg8"
+     inkscape:document-rotation="0" />
   <defs
      id="defs2" />
   <metadata
@@ -48,13 +49,6 @@
       </cc:Work>
     </rdf:RDF>
   </metadata>
-  <rect
-     style="fill:#ffffff;stroke-width:0.342881"
-     id="rect833"
-     width="132.29167"
-     height="132.29167"
-     x="1.0032179e-06"
-     y="1.0032179e-06" />
   <g
      id="g844"
      transform="matrix(1.4011207,0,0,1.4011207,-26.532463,-26.532463)">
