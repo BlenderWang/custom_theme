@@ -24,7 +24,7 @@ get_sidebar();
                 //$thumbimg = wp_get_attachment_link( $attachment->ID, 'thumbnail-size', true );
                 //echo '<li class="' . $class . ' data-design-thumbnail">' . $thumbimg . '</li>';
 				$img_url = wp_get_attachment_url( $attachment->ID );
-				echo '<img alt="image" class="lazy" data-src="' . $img_url . '" width="600" height="600"/>';
+				echo '<div class="grid--item"><img alt="image" class="lazy" data-src="' . $img_url . '" width="600" height="600"/></div>';
             }
              
         }
