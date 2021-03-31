@@ -2,7 +2,7 @@
     var lazyLoadInstances = [];
 
     function logElementEvent(eventName, element) {
-        console.log(Date.now(), eventName, element.getAttribute("data-src"));
+        console.log(Date.now(), eventName, element);
     }
 
     var initOneLazyLoad = function (lazyContainerElement) {

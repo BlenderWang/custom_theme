@@ -8,10 +8,10 @@ get_sidebar();
 ?>
 
 <div class="col col-8 main-col-wrapper">
-        <section id='gallery' class="gallery grid lazyContainer">
+        <section id='gallery' class="gallery grid">
 
             <?php while ( have_posts() ) : the_post(); ?>
-            <div class="grid--item">
+            <div class="grid--item lazyContainer">
                 <?php if ( has_post_thumbnail()) : ?>
                     <a href="<?php the_permalink(); ?>" alt="<?php the_title_attribute(); ?>">
                         <?php the_post_thumbnail(); ?>
