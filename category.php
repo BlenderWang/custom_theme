@@ -9,7 +9,7 @@ get_sidebar();
 
 <div class="col col-8 main-col-wrapper">
         <section id='gallery' class="gallery grid lazyContainer">
-
+		<p>category</p>
             <?php while ( have_posts() ) : the_post(); ?>
             <div class="grid--item">
                 <?php if ( has_post_thumbnail()) : ?>
