@@ -7,6 +7,7 @@ function my_page_scripts(){
     wp_enqueue_script('my_script', get_template_directory_uri() . '/js/lazy.js', [], '1.0', true);
 }
 add_action( 'wp_enqueue_scripts', 'my_page_scripts' );
+wp_enqueue_script('colf', get_template_directory_uri() . '/js/lazy.js', array('jquery'));
 get_header();
 get_sidebar();
 ?>
