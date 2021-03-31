@@ -1,37 +1,49 @@
 (function () {
-    /* infinite scroll */
-    const gallery = document.getElementById("gallery");
-    const items = document.querySelectorAll(".grid--item");
+    var lazyLoadInstances = [];
 
-    const showItems = () => {
-        items.forEach((item) => {
-            item.classList.remove("hide");
+    function logElementEvent(eventName, element) {
+        console.log(Date.now(), eventName, element.getAttribute("data-src"));
+    }
+
+    var initOneLazyLoad = function (lazyContainerElement) {
+        var oneLL = new LazyLoad({
+            container: lazyContainerElement,
         });
+
+        lazyLoadInstances.push(oneLL);
+        logElementEvent("🔑 ENTERED", lazyContainerElement);
     };
 
-    gallery.addEventListener("scroll", () => {
-        if (gallery.scrollTop + gallery.clientHeight >= gallery.scrollHeight) {
-            showItems();
-        }
-    });
+    var callback_exit = function (element) {
+        logElementEvent("🚪 EXITED", element);
+    };
+    var callback_loading = function (element) {
+        logElementEvent("⌚ LOADING", element);
+    };
+    var callback_loaded = function (element) {
+        logElementEvent("👍 LOADED", element);
+    };
+    var callback_error = function (element) {
+        logElementEvent("💀 ERROR", element);
+        element.src =
+            "https://via.placeholder.com/440x560/?text=Error+Placeholder";
+    };
+    var callback_finish = function () {
+        logElementEvent("✔️ FINISHED", document.documentElement);
+    };
+    var callback_cancel = function (element) {
+        logElementEvent("🔥 CANCEL", element);
+    };
 
-    // showItems();
-
-    /* form validation */
-    const forms = document.querySelectorAll(".needs-validation");
-
-    Array.prototype.slice.call(forms).forEach((form) => {
-        form.addEventListener(
-            "submit",
-            (e) => {
-                if (!form.checkValidity()) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                }
-
-                form.classList.add("was-validated");
-            },
-            false
-        );
+    var lazyLazy = new LazyLoad({
+        elements_selector: ".lazyContainer",
+        unobserve_entered: true,
+        callback_enter: initOneLazyLoad,
+        callback_exit: callback_exit,
+        callback_cancel: callback_cancel,
+        callback_loading: callback_loading,
+        callback_loaded: callback_loaded,
+        callback_error: callback_error,
+        callback_finish: callback_finish,
     });
 })();
