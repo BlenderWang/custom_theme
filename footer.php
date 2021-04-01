@@ -14,7 +14,6 @@
     </footer>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.3.1/dist/lazyload.min.js"></script>
 <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri().'/js/script.js'; ?>"></script>
 
 </body>
