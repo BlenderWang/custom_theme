@@ -12071,4 +12071,11 @@ figure ul {
 .hide {
     display: none;
 }
+
+.carousel-control-prev,
+.carousel-control-next {
+    border: none;
+    width: 10%;
+    opacity: 0.25;
+}
 /*# sourceMappingURL=custom.css.map */
