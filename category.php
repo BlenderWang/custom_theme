@@ -21,13 +21,11 @@ get_sidebar();
             if ( $attachments ) :
                 foreach ( $attachments as $attachment ) :
                     $class = "post-attachment mime-" . sanitize_title( $attachment->post_mime_type );
-                    //$thumbimg = wp_get_attachment_link( $attachment->ID, 'thumbnail-size', true );
-                    //echo '<li class="' . $class . ' data-design-thumbnail">' . $thumbimg . '</li>';
                     $img_url = wp_get_attachment_url( $attachment->ID );?>
                     
-                    <a href="<?php the_permalink(); ?>">
+                    <a href="<?php echo $img_url; ?>" data-lightbox="category-images">
                         <div class="grid--item">
-                            <img alt="image" class="lazy" data-src="<?php echo $img_url ?>" width="600" height="600"/>
+                            <img alt="image-<?php echo $attachment->ID; ?>" class="lazy" data-src="<?php echo $img_url ?>" width="600" height="600"/>
                         </div>
                     </a>
                 <?php endforeach; ?>

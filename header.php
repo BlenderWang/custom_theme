@@ -14,6 +14,7 @@
         <script type="text/javascript" src="<?php echo get_stylesheet_directory_uri().'/js/bootstrap.bundle.min.js'; ?>"></script>
         <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.3.1/dist/lazyload.min.js"></script>
         
+        <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri().'/css/lightbox.min.css'; ?>" />
         <link rel="stylesheet" href="<?php echo get_stylesheet_directory_uri().'/css/bootstrap.css'; ?>">
         <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
         
