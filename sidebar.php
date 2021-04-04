@@ -13,12 +13,14 @@
         <div
             class="logo-container d-flex justify-content-center align-items-center"
         >
-            <img
-                src="<?php echo get_stylesheet_directory_uri().'/images/alex_logo_portfolio.svg'; ?>"
-                class="img-logo py-3"
-                alt="placeholder logo"
-                srcset=""
-            />
+            <a href='/'>
+                <img
+                    src="<?php echo get_stylesheet_directory_uri().'/images/alex_logo_portfolio.svg'; ?>"
+                    class="img-logo py-3"
+                    alt="placeholder logo"
+                    srcset=""
+                />
+            </a>
         </div>
         <h3 class="text-uppercase fs-6 lh-lg">
             Alexander Elling
