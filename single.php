@@ -11,51 +11,53 @@ get_sidebar();
 <div class="col col-8 main-col-wrapper showcase">
     <div class="card mb-3">
         
-        <div class="card-body">
+        <div class="card-body lazyContainer">
             <?php the_title( '<h5 class="card-title">', '</h5>' ); ?> 
 
             <?php echo strip_shortcodes(wp_trim_words( get_the_content(), 80 )); ?>
-
-            <div id="carouselControls" class="carousel carousel-dark slide" data-bs-ride="false" data-bs-touch='true'>
-                <?php the_post(); ?>
-                <?php $attachments = get_posts( array(
-                    'post_type' => 'attachment',
-                    'posts_per_page' => -1,
-                    'post_parent' => $post->ID,
-                    'exclude'     => get_post_thumbnail_id()
-                ) );
-                ?>
-
-                <div class="carousel-inner">
-                <?php
-                    if ( $attachments ) :
-                        $counter = 0;
-                        foreach ( $attachments as $attachment ) :
-                            $url = wp_get_attachment_url( $attachment->ID );?>
-                                <?php if( $counter == 0 ) { ?>
-                                    <div class="grid--item carousel-item active">
-                                        <img src="<?php echo $url; ?>" alt="image" class="d-block w-100" />
-                                    </div>
-                                <?php } else { ?>
-                                    <div class="grid--item carousel-item">
-                                        <img src="<?php echo $url; ?>" alt="image" class="d-block w-100" />
-                                    </div>
-                                <?php } ?>
-                        <?php $counter++; ?>
-                        <?php endforeach; ?>
-                <?php endif; ?>
-                </div>
-                                
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselControls" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselControls" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-
+<?php
+            $images = [];
+            $attachments = get_posts( array(
+                'post_type' => 'attachment',
+                'posts_per_page' => -1,
+                'post_parent' => $post->ID,
+                'exclude'     => get_post_thumbnail_id()
+            ) );
+            foreach ( $attachments as $attachment ) {
+                $img_url = wp_get_attachment_url( $attachment->ID );
+                array_push($images, $img_url);
+            }
+        ?>
+            
+            <?php
+            
+                if (has_block('core/gallery')) {
+                    $post_blocks = parse_blocks($post->post_content);
+                    foreach( $post_blocks as $block ) {
+                        if( 'core/gallery' === $block['blockName'] ){
+                            $src = [];
+                            preg_match_all( '/data-full-url="([^"]*)"/i', $block['innerHTML'], $src ) ;
+                            $images = array_merge($images, $src[1]);
+                            $images = array_unique($images);
+                            //print_r($images);
+                        }   
+                    }
+                } 
+            ?>
+            <section id='gallery' class="gallery grid lazyContainer">
+            <?php
+            if ( $images ) :
+                foreach ( $images as $image ) :
+            ?>
+                    
+                    <a href="<?php echo $image; ?>" data-lightbox="category-images">
+                        <div class="grid--item">
+                            <img alt="image-" class="lazy" data-src="<?php echo $image ?>" width="600" height="600"/>
+                        </div>
+                    </a>
+                <?php endforeach; ?>
+            <?php endif; ?>
+            </section>
             <p class="card-text">
                 <small class="text-muted">
                     <?php 
@@ -95,5 +97,4 @@ get_sidebar();
     ?>
 </div>
 </main>
-
 <?php get_footer(); ?>

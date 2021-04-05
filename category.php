@@ -24,7 +24,8 @@ get_sidebar();
         ?>
             
             <?php
-                if (has_block('core/gallery', $post->post_content)) {
+
+                if (has_block('core/gallery')) {
                     $post_blocks = parse_blocks($post->post_content);
                     foreach( $post_blocks as $block ) {
                         if( 'core/gallery' === $block['blockName'] ){
